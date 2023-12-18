@@ -22,7 +22,8 @@ function destroyBoxes() {
   boxesContainer.innerHTML = "";
 }
 
-document.querySelector("button[data-create]").addEventListener("click", () => {
+const buttonCreate = document.querySelector("button[data-create]")
+  buttonCreate.addEventListener("click", () => {
   const input = document.querySelector("input");
   const amount = parseInt(input.value);
 
@@ -35,5 +36,5 @@ document.querySelector("button[data-create]").addEventListener("click", () => {
 });
 
 document
-  .querySelector("button[data-destroy]")
-  .addEventListener("click", destroyBoxes);
+  const buttonDestroy = document.querySelector("button[data-destroy]")
+  buttonDestroy.addEventListener("click", destroyBoxes);
