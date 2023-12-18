@@ -1,8 +1,3 @@
-// const gallery = document.querySelector('.gallery');
-// const imagesList = document.createElement('img', 'li');
-// console.log(imagesList);
-// const addImages = gallery.append()
-
 const images = [
   {
     url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
@@ -30,15 +25,21 @@ const images = [
   },
 ];
 
-const gallery = document.querySelector(".gallery");
+const galleryContainer = document.querySelector('.gallery');
+const galleryItems = [];
+
 images.forEach((image) => {
-  const galleryItem = document.createElement("li");
-  galleryItem.classList.add("gallery-item");
+  const galleryItem = document.createElement('li');
+  galleryItem.classList.add('gallery-item')
 
-  const img = document.createElement("img");
-  img.src = image.url;
-  img.alt = image.alt;
+  const imgEl = document.createElement('img');
+  imgEl.src = image.url;
+  imgEl.alt = image.url;
 
-  galleryItem.appendChild(img);
-  gallery.appendChild(galleryItem);
+  galleryItem.append(imgEl)
+  galleryItems.push(galleryItem)
 });
+
+galleryContainer.append(...galleryItems);
+
+console.log(galleryContainer)
