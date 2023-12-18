@@ -42,4 +42,4 @@ images.forEach((image) => {
 
 galleryContainer.append(...galleryItems);
 
-console.log(galleryContainer)
+// console.log(galleryContainer)
